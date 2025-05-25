@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Treino da Semana - Esposa</title>
+<style>
+  body {
+    background-color: #121212;
+    color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  h1, h2 {
+    color: #FF69B4;
+  }
+  .tab {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .tab button {
+    background-color: #333;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  .tab button.active {
+    background-color: #FF69B4;
+    color: black;
+  }
+  .content {
+    display: none;
+  }
+  .content.active {
+    display: block;
+  }
+  .exercise {
+    margin-bottom: 12px;
+  }
+  label {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+  }
+  label input {
+    margin-top: 4px;
+  }
+  .desc {
+    font-size: 0.95em;
+    color: #bbbbbb;
+    margin-left: 26px;
+    margin-top: -8px;
+    margin-bottom: 10px;
+  }
+  textarea {
+    width: 100%;
+    height: 80px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    resize: none;
+  }
+  button.reset-btn {
+    margin-top: 20px;
+    background: #ff5252;
+    border: none;
+    padding: 10px;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<h1>Treino da Semana</h1>
+
+<div class="tab">
+  <button onclick="openTab('seg')" class="active">Segunda</button>
+  <button onclick="openTab('qua')">Quarta</button>
+  <button onclick="openTab('sex')">Sexta</button>
+</div>
+
+<div id="seg" class="content active">
+  <h2>Segunda - Pernas e Glúteos</h2>
+  <div class="exercise">
+    <label><input type="checkbox">Agachamento com halteres – 3x12</label>
+    <div class="desc">Segure dois halteres leves ao lado do corpo e agache devagar, empurrando o quadril para trás. Mantenha a coluna reta.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Avanço (passada) – 3x10 cada perna</label>
+    <div class="desc">Dê um passo à frente, dobre os dois joelhos e volte. Faça com as duas pernas. Pode ser feito com ou sem peso.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Elevação pélvica – 3x15</label>
+    <div class="desc">Deite no colchonete, joelhos dobrados, e levante o quadril contraindo o bumbum. Pausa em cima e desce devagar.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Inclinar o tronco com halteres – 3x12</label>
+    <div class="desc">Fique em pé, segure dois halteres, mantenha a coluna reta e incline o tronco para frente, sentindo alongar a parte de trás das pernas. Volte devagar.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Cadeira abdutora – 3x15</label>
+    <div class="desc">Sente no aparelho e empurre as pernas para fora, focando no glúteo lateral.</div>
+  </div>
+  <textarea placeholder="Observações do treino..."></textarea>
+</div>
+
+<div id="qua" class="content">
+  <h2>Quarta - Braços, Costas e Ombros</h2>
+  <div class="exercise">
+    <label><input type="checkbox">Remada curvada – 3x12</label>
+    <div class="desc">Com dois halteres, incline levemente o tronco e puxe os pesos em direção à cintura, contraindo as costas.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Elevação de halteres acima da cabeça – 3x10</label>
+    <div class="desc">Segure dois halteres ao lado dos ombros e empurre para cima até esticar os braços. Ajuda nos ombros.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Rosca de bíceps – 3x12</label>
+    <div class="desc">Segure halteres com os braços esticados e dobre os cotovelos até aproximar os pesos dos ombros.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Tríceps com halter atrás da cabeça – 3x12</label>
+    <div class="desc">Segure 1 halter com as duas mãos e estique acima da cabeça. Desça o peso atrás da nuca e estique novamente.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Elevação lateral com halteres – 3x12</label>
+    <div class="desc">Com os braços ao lado do corpo, levante os halteres até a altura dos ombros. Trabalha os ombros laterais.</div>
+  </div>
+  <textarea placeholder="Observações do treino..."></textarea>
+</div>
+
+<div id="sex" class="content">
+  <h2>Sexta - Corpo Inteiro + Core</h2>
+  <div class="exercise">
+    <label><input type="checkbox">Agachamento sumô – 3x12</label>
+    <div class="desc">Afaste bem os pés, segure um peso com as duas mãos no centro e agache. Foco em glúteo e interno de coxa.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Flexão de braço – 3x10</label>
+    <div class="desc">Pode ser no chão ou com joelhos apoiados. Mantenha o corpo reto e desça com os braços.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Prancha no colchonete – 3x 30 segundos</label>
+    <div class="desc">Apoie os antebraços e os pés no chão. Mantenha o corpo reto, contraia o abdômen e respire devagar.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Abdominal bicicleta – 3x20</label>
+    <div class="desc">Deite, mãos na nuca, leve cotovelo até o joelho oposto, alternando os lados.</div>
+  </div>
+  <div class="exercise">
+    <label><input type="checkbox">Remada no elástico ou polia baixa – 3x12</label>
+    <div class="desc">Puxe o elástico ou cabo em direção ao abdômen, sentindo as costas contraírem.</div>
+  </div>
+  <textarea placeholder="Observações do treino..."></textarea>
+</div>
+
+<button class="reset-btn" onclick="resetAll()">Resetar Treino</button>
+
+<script>
+function openTab(tab) {
+  document.querySelectorAll('.content').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.tab button').forEach(btn => btn.classList.remove('active'));
+  document.getElementById(tab).classList.add('active');
+  event.target.classList.add('active');
+}
+function resetAll() {
+  document.querySelectorAll('input[type=checkbox]').forEach(cb => cb.checked = false);
+  document.querySelectorAll('textarea').forEach(txt => txt.value = '');
+}
+</script>
+
+</body>
+</html>
